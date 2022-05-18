@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_close3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:src="@drawable/ic_close" />
+
+    <TextView
+        android:id="@+id/tv_tip3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_close3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="-7dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Tạo cơ hội hàng ngày để xây dựng kỹ năng đọc của con quý vị bằng cách tạo ra một môi trường học tập phong phú tại nhà. Bé có thể nhìn thấy các chữ cái và từ vựng trên sách, đồ chơi, giấy dán trên tường. Điều này sẽ giúp bé ghi nhớ lâu hơn và kích thích và học được cách ghép chữ. "
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_small" />
+
+</RelativeLayout>

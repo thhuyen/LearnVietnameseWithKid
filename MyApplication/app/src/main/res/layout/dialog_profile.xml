@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_close_dialog_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="-7dp"
+        android:src="@drawable/ic_close" />
+
+    <LinearLayout
+        android:id="@+id/parent_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_close_dialog_profile"
+        android:layout_marginLeft="@dimen/margin_text"
+        android:layout_marginRight="@dimen/margin_text"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên người dùng:"
+            android:textSize="@dimen/text_size_medium"/>
+
+        <TextView
+            android:id="@+id/profile_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="@dimen/text_size_medium"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/parent_hoten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/parent_user"
+        android:weightSum="3"
+        android:layout_marginLeft="@dimen/margin_text"
+        android:layout_marginRight="@dimen/margin_text"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Họ tên:"
+            android:textSize="@dimen/text_size_medium"/>
+
+        <EditText
+            android:id="@+id/et_profile_hoten"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"/>
+
+        <ImageView
+            android:id="@+id/img_sua_profile_hoten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_done"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/parent_hoten"
+        android:weightSum="3"
+        android:layout_marginLeft="@dimen/margin_text"
+        android:layout_marginRight="@dimen/margin_text"
+        android:layout_marginTop="@dimen/margin_text"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email:  "
+            android:textSize="@dimen/text_size_medium"/>
+
+        <EditText
+            android:id="@+id/et_profile_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"/>
+
+        <ImageView
+            android:id="@+id/img_sua_profile_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_done"/>
+    </LinearLayout>
+
+</RelativeLayout>

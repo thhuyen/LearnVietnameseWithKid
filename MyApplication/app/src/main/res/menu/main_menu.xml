@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_hoso"
+            android:icon="@drawable/ic_user"
+            android:title="Hồ sơ"></item>
+        <item
+            android:id="@+id/nav_quatrinh"
+            android:icon="@drawable/ic_quatrinh"
+            android:title="Quá trình" />
+        <item
+            android:id="@+id/nav_danhgia"
+            android:icon="@drawable/ic_danhgia"
+            android:title="Đánh giá" />
+        <item
+            android:id="@+id/nav_meohoctot"
+            android:icon="@drawable/ic_meohoctot"
+            android:title="Mẹo học tốt" />
+        <item
+            android:id="@+id/nav_infor"
+            android:icon="@drawable/ic_about_us"
+            android:title="Thông tin chung" />
+
+        <item
+            android:id="@+id/nav_log_out"
+            android:title="Log out"
+            android:icon="@drawable/ic_logout"
+            />
+    </group>
+</menu>

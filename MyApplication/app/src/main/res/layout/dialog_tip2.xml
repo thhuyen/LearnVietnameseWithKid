@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_close2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:src="@drawable/ic_close" />
+
+    <TextView
+        android:id="@+id/tv_tip2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_close2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="-7dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Sau bước làm quen với mặt chữ, bạn có thể dạy bé nhận diện được chuỗi đánh vần cùng với các dấu câu. Bạn có thể dạy con học tập đọc lớp 1 tại nhà bằng cách sử dụng các thẻ âm tiết và cho bé tự sắp xếp theo đúng với từ mà bạn đề ra. Hoặc bạn có thể gợi ý cho bé thêm đâu là những đồ vật có chữ cái đầu giống nhau. "
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_small" />
+
+</RelativeLayout>

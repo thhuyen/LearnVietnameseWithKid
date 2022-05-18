@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Vào lớp 1 cùng bé</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="about_us1">Chúng tôi cung cấp những khóa học vui nhộn giúp bé có được căn bản trước khi vào lớp 1, nắm vững và củng cố kiến thức cho các bé bị mất gốc.</string>
+    <string name="about_us2">Các khóa học hoàn toàn miễn phí và bổ ích, các bé sẽ không cảm thấy bị nhàm chán khi sử dụng.</string>
+    <string name="tv_feedback">Cảm ơn bạn đã ghé thăm. Mọi phản hồi của bạn đều được ghi nhận và là động lực giúp chúng tôi ngày càng cải thiện các tính năng cũng như chất lượng của sản phẩm.</string>
+    <string name="danh_gia_tai_day">Đánh giá chúng tôi: </string>
+    <string name="about_link"><a href='https://bit.ly/feedback_nhom19'>Đánh giá chúng tôi tại đây</a></string>
+    <string name="about_email"><a href='mailto:20520207@gm.uit.edu.vn'>Gửi email tại đây</a></string>
+    <string name="tip1">1. Làm quen với bảng chữ cái</string>
+    <string name="tip2">2. Làm thẻ từ đơn giản tại nhà</string>
+    <string name="tip3">3. Thu hút con bạn trong một môi trường học tập phong phú</string>
+    <string name="tip4">4. Chơi trò chơi đố chữ ở nhà hoặc bất kỳ nơi đâu khi bé vui vẻ</string>
+    <string name="tip5">5. Tận dụng sức mạnh của công nghệ để thu hút sự chú ý của bé</string>
+
+</resources>
