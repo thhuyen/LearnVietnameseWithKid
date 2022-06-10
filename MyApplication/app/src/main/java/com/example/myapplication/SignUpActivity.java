@@ -28,7 +28,7 @@ public class SignUpActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_up);
 
-        Objects.requireNonNull(getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.background)));
+        Objects.requireNonNull(getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.thanh)));
         et_username_signUp = findViewById(R.id.et_username_sign_up);
         et_password_signUp = findViewById(R.id.et_password_sign_up);
         et_repassword_signUp = findViewById(R.id.et_repassword_sign_up);
@@ -61,7 +61,7 @@ public class SignUpActivity extends AppCompatActivity  {
                             if (insert == true)
                             {
                                 Toast.makeText(SignUpActivity.this, "Tạo tài khoản thành công", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getApplicationContext(),SignUpActivity.class);
+                                Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
                                 startActivity(intent);
                             }
                             else // insert == false

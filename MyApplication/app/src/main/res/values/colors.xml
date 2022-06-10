@@ -10,4 +10,6 @@
     <color name="text_color">#FF004C85</color>
     <color name="background">#F58439</color>
     <color name="cardBackGround">#F6F54D</color>
+    <color name="colorPurple">#332FA2</color>
+    <color name="thanh">#FDCEDE</color>
 </resources>

@@ -13,12 +13,14 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,9 +38,10 @@ public class HomeActivity extends AppCompatActivity {
     NavigationView navigationView_home;
     ActionBarDrawerToggle toggle;
     TextView hello;
+    LinearLayout dialog_hoctap, dialog_ontap;
     String user_name, pass, ten, email;
-    CardView cv_tiengviet, toan;
-
+    CardView cv_tiengviet, cv_toan, cv_tienganh, cv_daoduc;
+    ImageView img_close_dialog_lesson;
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
@@ -54,7 +57,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        Objects.requireNonNull(getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.background)));
+        //Objects.requireNonNull(getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.background)));
         db = new DBHelper(HomeActivity.this, "users.sqlite", null,1);
 
         // ánh xạ-
@@ -137,12 +140,28 @@ public class HomeActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.nav_quatrinh:
-                        Toast.makeText(HomeActivity.this, "quatrinh", Toast.LENGTH_SHORT).show();;
+                        Toast.makeText(HomeActivity.this, "Tính năng đang phát triển!", Toast.LENGTH_SHORT).show();;
                         return true;
 
                     case R.id.nav_danhgia:
-                        Intent intent3 = new Intent(getApplicationContext(), RateUsActivity.class);
-                        startActivity(intent3);
+                        Dialog rate = new Dialog(HomeActivity.this);
+                        rate.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                        rate.setContentView(R.layout.dialog_rate);
+
+                        TextView tv1, tv2;
+                        ImageView img_close;
+                        tv1 = rate.findViewById(R.id.tv_form_link);
+                        tv2 = rate.findViewById(R.id.tv_email_link);
+                        img_close = rate.findViewById(R.id.img_close_link);
+                        img_close.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                rate.dismiss();
+                            }
+                        });
+                      //  tv1.setMovementMethod(LinkMovementMethod.getInstance());
+                        tv2.setMovementMethod(LinkMovementMethod.getInstance());
+                        rate.show();
                         return true;
 
                     case R.id.nav_meohoctot:
@@ -151,9 +170,9 @@ public class HomeActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.nav_infor:
-                        Intent intent5 = new Intent(getApplicationContext(), AboutUsActivity.class);
-                        startActivity(intent5);
+                        Toast.makeText(HomeActivity.this, "infor", Toast.LENGTH_SHORT).show();
                         return true;
+
                     case R.id.nav_log_out:
                         Intent intent6 = new Intent(getApplicationContext(), LoginActivity.class);
                         startActivity(intent6);
@@ -163,15 +182,60 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        // set sự kiện mô tiếng việt
+        // set sự kiện môn tiếng việt
         cv_tiengviet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent tiengviet = new Intent(getApplicationContext(),LessonActivity.class);
-                startActivity(tiengviet);
+                Dialog dialog = new Dialog(HomeActivity.this);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.dialog_lesson);
+
+                dialog_hoctap = dialog.findViewById(R.id.dialog_hoctap);
+                dialog_ontap = dialog.findViewById(R.id.dialog_ontap);
+                img_close_dialog_lesson = dialog.findViewById(R.id.img_close_dialog_lesson);
+
+                dialog.setCanceledOnTouchOutside(false);
+                dialog.show();
+                img_close_dialog_lesson.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog_hoctap.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent hoctap = new Intent(getApplicationContext(),LessonActivity.class);
+                        startActivity(hoctap);
+                    }
+                });
+                dialog_ontap.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent ontap = new Intent(getApplicationContext(),ReviewActivity.class);
+                        startActivity(ontap);
+                    }
+                });
+
             }
         });
 
+        // set sự kiệ môn tiếng anh và đạo đức
+
+        cv_daoduc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(HomeActivity.this, "Tính năng đang phát triển", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        cv_tienganh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(HomeActivity.this, "Tính năng đang phát triển", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void mapping() {
@@ -179,6 +243,9 @@ public class HomeActivity extends AppCompatActivity {
         navigationView_home = findViewById(R.id.navigatioview);
         hello = findViewById(R.id.tv_hello);
         cv_tiengviet = findViewById(R.id.cardview_tiengviet);
+        cv_daoduc = findViewById(R.id.cardview_daoduc);
+        cv_tienganh = findViewById(R.id.cardview_tienganh);
+
     }
 
     public void ActionGetData()

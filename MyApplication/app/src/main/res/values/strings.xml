@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Vào lớp 1 cùng bé</string>
+    <string name="app_name">Học tiếng việt cùng bé</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="about_us1">Chúng tôi cung cấp những khóa học vui nhộn giúp bé có được căn bản trước khi vào lớp 1, nắm vững và củng cố kiến thức cho các bé bị mất gốc.</string>
@@ -13,5 +13,5 @@
     <string name="tip3">3. Thu hút con bạn trong một môi trường học tập phong phú</string>
     <string name="tip4">4. Chơi trò chơi đố chữ ở nhà hoặc bất kỳ nơi đâu khi bé vui vẻ</string>
     <string name="tip5">5. Tận dụng sức mạnh của công nghệ để thu hút sự chú ý của bé</string>
-
+    <string name="link_tapdoc"><a href='https://www.youtube.com/watch?v=2PFvFLwXlM8'>Xem các bài giảng giúp bé luyện đọc</a></string>
 </resources>

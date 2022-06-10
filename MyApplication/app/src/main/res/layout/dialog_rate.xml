@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="330dp"
+    android:layout_height="150dp"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_margin = "30dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:id="@+id/img_close_link"
+        android:src="@drawable/ic_close"/>
+    <TextView
+        android:id="@+id/tv_form_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_large"
+        android:text="@string/about_link"
+        android:layout_gravity="center_vertical"/>
+    <TextView
+        android:id="@+id/tv_email_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="@dimen/text_size_large"
+        android:text="@string/about_email"
+        android:layout_gravity="center_vertical"/>
+
+</LinearLayout>

@@ -1,20 +1,27 @@
 package com.example.myapplication;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import pl.droidsonroids.gif.GifImageView;
 
 public class AlphabetActivity extends AppCompatActivity {
 
     GridLayout parent_card;
     CardView a,aw,aa,b,c,d,dd,e,ee,g,h,i,k,l,m,n,o,oo,ow,p,q,r,s,t,u,uw,v,x,y;
-    ImageView img_home;
+    MediaPlayer audio_apb;
+    GifImageView gif_next, gif_back;
+    ImageView img_lesson, img_home;
  //   DBHelper db_content_subject;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +72,51 @@ public class AlphabetActivity extends AppCompatActivity {
             }
         });
 
+        gif_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(AlphabetActivity.this);
+                builder.setMessage("Bé có muốn chuyển sang học nguyên âm?");
+                builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent na = new Intent(getApplicationContext(), NguyenAmActivity.class);
+                        startActivity(na);
+                    }
+                });
+                builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                    }
+                });
+                builder.show();
+
+            }
+        });
+        gif_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(AlphabetActivity.this);
+                builder.setMessage("Bé có muốn chuyển sang danh sách bài học?");
+                builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent lesson = new Intent(getApplicationContext(), LessonActivity.class);
+                        startActivity(lesson);
+                    }
+                });
+                builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                    }
+                });
+                builder.show();
+
+            }
+        });
+
     }
+
     // set âm thanh cho card view
     private void setSingleEvent(GridLayout parent_card) {
         for (int i = 0; i < parent_card.getChildCount();i++)
@@ -77,120 +128,120 @@ public class AlphabetActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     switch (indexx){
                         case 0:
-                            MediaPlayer player0= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_a);
-                            player0.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_a);
+                            audio_apb.start();
                             break;
                         case 1:
-                            MediaPlayer player1= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_aw);
-                            player1.start();
+                            audio_apb= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_aw);
+                            audio_apb.start();
                             break;
                         case 2:
-                            MediaPlayer player2= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_aa);
-                            player2.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_aa);
+                            audio_apb.start();
                             break;
                         case 3:
-                            MediaPlayer player3= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_b);
-                            player3.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_b);
+                            audio_apb.start();
                             break;
                         case 4:
-                            MediaPlayer player4= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_c);
-                            player4.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_c);
+                            audio_apb.start();
                             break;
                         case 5:
-                            MediaPlayer player5= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_d);
-                            player5.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_d);
+                            audio_apb.start();
                             break;
                         case 6:
-                            MediaPlayer player6= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_dd);
-                            player6.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_dd);
+                            audio_apb.start();
                             break;
                         case 7:
-                            MediaPlayer player7= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_e);
-                            player7.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_e);
+                            audio_apb.start();
                             break;
                         case 8:
-                            MediaPlayer player8= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_ee);
-                            player8.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_ee);
+                            audio_apb.start();
                             break;
                         case 9:
-                            MediaPlayer player9= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_g);
-                            player9.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_g);
+                            audio_apb.start();
                             break;
                         case 10:
-                            MediaPlayer player10= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_h);
-                            player10.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_h);
+                            audio_apb.start();
                             break;
                         case 11:
-                            MediaPlayer player11= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_i);
-                            player11.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_i);
+                            audio_apb.start();
                             break;
                         case 12:
-                            MediaPlayer player12= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_k);
-                            player12.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_k);
+                            audio_apb.start();
                             break;
                         case 13:
-                            MediaPlayer player13= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_l);
-                            player13.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_l);
+                            audio_apb.start();
                             break;
                         case 14:
-                            MediaPlayer player14= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_m);
-                            player14.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_m);
+                            audio_apb.start();
                             break;
                         case 15:
-                            MediaPlayer player15= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_n);
-                            player15.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_n);
+                            audio_apb.start();
                             break;
                         case 16:
-                            MediaPlayer player16= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_o);
-                            player16.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_o);
+                            audio_apb.start();
                             break;
                         case 17:
-                            MediaPlayer player17= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_oo);
-                            player17.start();
+                            audio_apb= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_oo);
+                            audio_apb.start();
                             break;
                         case 18:
-                            MediaPlayer player18= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_ow);
-                            player18.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_ow);
+                            audio_apb.start();
                             break;
                         case 19:
-                            MediaPlayer player19= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_p);
-                            player19.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_p);
+                            audio_apb.start();
                             break;
                         case 20:
-                            MediaPlayer player20= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_q);
-                            player20.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_q);
+                            audio_apb.start();
                             break;
                         case 21:
-                            MediaPlayer player21= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_r);
-                            player21.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_r);
+                            audio_apb.start();
                             break;
                         case 22:
-                            MediaPlayer player22= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_s);
-                            player22.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_s);
+                            audio_apb.start();
                             break;
                         case 23:
-                            MediaPlayer player23= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_t);
-                            player23.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_t);
+                            audio_apb.start();
                             break;
                         case 24:
-                            MediaPlayer player24= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_u);
-                            player24.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_u);
+                            audio_apb.start();
                             break;
                         case 25:
-                            MediaPlayer player25= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_uw);
-                            player25.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_uw);
+                            audio_apb.start();
                             break;
                         case 26:
-                            MediaPlayer player26= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_v);
-                            player26.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_v);
+                            audio_apb.start();
                             break;
                         case 27:
-                            MediaPlayer player27= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_x);
-                            player27.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_x);
+                            audio_apb.start();
                             break;
                         case 28:
-                            MediaPlayer player28= MediaPlayer.create(AlphabetActivity.this,R.raw.audio_i);
-                            player28.start();
+                            audio_apb = MediaPlayer.create(AlphabetActivity.this,R.raw.audio_i);
+                            audio_apb.start();
                             break;
 
 
@@ -233,6 +284,8 @@ public class AlphabetActivity extends AppCompatActivity {
         v = findViewById(R.id.cv_v);
         y = findViewById(R.id.cv_y);
         parent_card = findViewById(R.id.parent_card);
-        img_home = findViewById(R.id.img_home);
+        gif_next = (GifImageView) findViewById(R.id.next_gif_apb);
+        gif_back = (GifImageView) findViewById(R.id.back_gif_apb);
+        img_home = findViewById(R.id.img_home_apb);
     }
 }

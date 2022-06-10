@@ -3,6 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/drawable/edit_text.xml" value="0.1475" />
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/layout/activity_about_us.xml" value="0.19581017528858485" />
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/layout/activity_alphabet.xml" value="0.20863616930312098" />
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/layout/activity_ghep_tu.xml" value="0.19709277469003847" />
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/layout/activity_home.xml" value="0.20863616930312098" />
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/layout/activity_nguyen_am.xml" value="0.2" />
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/layout/activity_otghep_cau.xml" value="0.1974050046339203" />
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/layout/activity_otghep_tu.xml" value="0.1834117144078666" />
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/layout/activity_phu_am.xml" value="0.17145505097312327" />
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/layout/activity_rate_us.xml" value="0.22857142857142856" />
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/layout/activity_review.xml" value="0.2" />
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/layout/activity_van.xml" value="0.2" />
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/layout/dialog_end.xml" value="0.19495510902094912" />
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/layout/dialog_lesson.xml" value="0.20863616930312098" />
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/layout/dialog_rate.xml" value="0.19581017528858485" />
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/layout/dialog_tapdoc.xml" value="0.264" />
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/layout/dialog_test.xml" value="0.16589434661723818" />
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/layout/dialog_tip1.xml" value="0.19581017528858485" />
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/layout/dialog_tip5.xml" value="0.20863616930312098" />
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/layout/header_menu.xml" value="0.20863616930312098" />
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/layout/lesson_activity.xml" value="0.152" />
+        <entry key="..\:/Project Android/LearnVietnameseWithKid/MyApplication/app/src/main/res/menu/main_menu.xml" value="0.20863616930312098" />
         <entry key="..\:/Project Android/MyApplication/app/src/main/res/drawable-anydpi-v24/ic_about_us.xml" value="0.2175" />
         <entry key="..\:/Project Android/MyApplication/app/src/main/res/drawable-anydpi/ic_quatrinh.xml" value="0.1105" />
         <entry key="..\:/Project Android/MyApplication/app/src/main/res/drawable/edit_text.xml" value="0.1845" />
